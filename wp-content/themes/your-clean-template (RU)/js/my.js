@@ -262,7 +262,17 @@ jQuery('.next').click(function() {
 	}
 	else {
 		if (stagenumber == 5) {
-			jQuery('.next').html('Submit >>>');
+			jQuery('.next').css('display','none');
+			jQuery('.next').html('Send data and go to cart');
+			if(jQuery('input[name=bottle]:checked').val() == 'bottle6') {
+				jQuery('.myownwoo253').css('display','inline-block');
+			}
+			if((jQuery('input[name=bottle]:checked').val() == 'bottle3') || (jQuery('input[name=bottle]:checked').val() == 'bottle4') || (jQuery('input[name=bottle]:checked').val() == 'bottle5')) {
+				jQuery('.myownwoo254').css('display','inline-block');
+			}
+			if((jQuery('input[name=bottle]:checked').val() == 'bottle1') || (jQuery('input[name=bottle]:checked').val() == 'bottle2')) {
+				jQuery('.myownwoo255').css('display','inline-block');
+			}
 		}
 		stagenumber++;
 		jQuery('.stagetitle').html('Stage #' + stagenumber);
@@ -311,7 +321,7 @@ jQuery('.previous').click(function() {
 		jQuery('.summary').css('display','none');
 	}
 	if (stagenumber == 6) {
-		jQuery('.next').html('Next Stage >>>');
+		jQuery('.next').css('display','block');
 	}
 	stagenumber--;
 	jQuery('.stagetitle').html('Stage #' + stagenumber);
@@ -329,6 +339,10 @@ jQuery('.previous').click(function() {
 	}
 	jQuery('.next').removeClass('disabled');
 	jQuery('.summary p:last-child').remove(); 
+});
+
+jQuery('.myownwoo .products .product .add_to_cart_button').click(function() {
+	jQuery('.next').css('display','inline-block');
 });
 
 jQuery('.story img').click(function() {

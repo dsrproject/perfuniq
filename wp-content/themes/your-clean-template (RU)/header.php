@@ -61,15 +61,6 @@ if($_SERVER['REQUEST_URI'] == '/shop') {
 			<div class="categorybg">
 			</div>
 		<?php }?>
-		<?php if(is_cart()) { 
-			$myownid = $_SERVER['REQUEST_URI'];
-			$myownid = substr_replace($myownid, '' , 0, 14);
-			if(($myownid == '253') || ($myownid == '254') || ($myownid == '255')) {
-				add_product_to_cart2($myownid); ?>
-				<script>jQuery('.woocommerce > form').submit();
-			//window.location.href = "http://perfuniq.com/cart";</script>
-		<?php } }
-		?>
 		<?php //add_product_to_cart2('253'); ?>
 		<script>//jQuery('.woocommerce > form').submit();</script>
 	</header>

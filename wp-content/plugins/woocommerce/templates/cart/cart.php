@@ -6,15 +6,13 @@
  * @package WooCommerce/Templates
  * @version 2.3.8
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
 wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
-
+<?php  ?>
 <form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>

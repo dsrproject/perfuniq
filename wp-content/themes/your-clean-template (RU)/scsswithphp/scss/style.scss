@@ -1024,6 +1024,27 @@ footer {
 				margin-left: 5px;
 				margin-right: 5px;
 			}
+			.myownwoo {
+				display: none; 
+				float:left; 
+				//display: inline-block; 
+				.woocommerce .products .product > a {
+					&:nth-child(1) {
+						display: none; 
+					}
+					&:nth-child(2) {
+						margin-top: 0 !important; 
+						font-weight: 400;
+						color: white;
+						background-color: #337AB7;
+						padding-top: 10px;
+						padding-bottom: 10px;
+					}
+					&:nth-child(3) {
+						display: none; 
+					}
+				}
+			}
 		}
 		.progress {
 			margin-top: 40px;
@@ -1354,7 +1375,7 @@ ul.eo-events-shortcode {
 			.bottleresult {
 				width: 100% !important;
 				position: absolute;
-				top: 10vw;
+				top: 38vw;
 				.bottletop img {
 					width: 25% !important;
 				}
@@ -1399,9 +1420,25 @@ ul.eo-events-shortcode {
 				font-size: 5vw; 
 			}
 		}
-		button {
-			font-size: 4vw; 
+		.bbuttons {
+			button {
+				font-size: 4vw; 
+			}
+			.myownwoo {
+				margin-top: -5px; 
+				margin-left: 5px;
+				ul li {
+					margin-bottom: 0 !important; 
+					a { 
+						font-size: 4vw; 
+						padding-top: 6px !important;
+						padding-bottom: 6px !important;
+						line-height: 1.42857143;
+					}
+				}
+			}
 		}
+			
 	}
 	.designpage {
 		background-size: cover;

@@ -4,6 +4,7 @@
 $adminemail="israel@perfuniq.com";  // e-mail админа 
 $date=date("d.m.y"); // число.месяц.год 
 $time=date("H:i"); // часы:минуты:секунды 
+$backurl='/cart';
  
 //---------------------------------------------------------------------- // 
  
@@ -63,24 +64,16 @@ address: $address
 emailskype: $emailskype
 social: $social
 website: $website
-adresat: $adresat ";
-if($bottle == 'bottle6') {
-	$backurl="/cart?myownid=253"; 
-}
-else if(($bottle == 'bottle3')||($bottle == 'bottle4')||($bottle == 'bottle5')) {
-	$backurl="/cart?myownid=254"; 
-}
-else if(($bottle == 'bottle1')||($bottle == 'bottle2')) {
-	$backurl="/cart?myownid=255"; 
-}
+adresat: $adresat "; 
+
 // Отправляем письмо админу  
 mail("$adminemail", "$date $time Message from site Parfuniq
 $name", "$msg");  
 /*$msg */ 
 // Выводим сообщение пользователю 
 print "<script language='Javascript'><!-- 
-function reload() {location = \"$backurl\"}; setTimeout('reload()', 3000); 
+function reload() {location = \"$backurl\"}; setTimeout('reload()', 2000); 
 //--></script> 
-<p style='font-size: 24px; text-align:center;'>Adding your own perfume to the basket!</p>";  
+<p style='font-size: 24px; text-align:center;'>Sending your data!</p>";  
 exit; 
 ?>

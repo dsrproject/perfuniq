@@ -522,7 +522,16 @@
 						<input type="number" min="1" class="form-control">--> 
 					</div>
 					<div class="bbuttons">
-						<button class="btn btn-primary nextstage previous"><<< Previous Stage</button>					
+						<button class="btn btn-primary nextstage previous"><<< Previous Stage</button>	
+						<div class="myownwoo myownwoo253">
+							[product id="253"] 
+						</div>
+						<div class="myownwoo myownwoo254">
+							[product id="254"] 
+						</div>
+						<div class="myownwoo myownwoo255">
+							[product id="255"] 
+						</div>		
 						<button class="btn btn-primary nextstage disabled next">Next Stage >>></button>	
 					</div> 
 					<div class="progress">
