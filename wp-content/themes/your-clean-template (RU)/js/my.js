@@ -13,12 +13,16 @@ jQuery(window).load(function(){
 	}
 	if (jQuery('body').hasClass('single-product')) {
 		mlvariations();
+		jQuery('.mobile .entry-summary div .price:first-child').after('<p class="clc">Choose your liter capacity</p>');
+		jQuery('.mobile .entry-summary .single_variation .clc').remove();
+		
 	}
 	if (jQuery('body').hasClass('page-id-5')) {
 		jQuery('.carousel-inner .item').unwrap().unwrap();
 		jQuery('.carousel-inner .item:first-child').addClass('active');
 		noevents();
 	}
+	
 }); 
 
 function slider(k) {
@@ -221,7 +225,7 @@ jQuery(".selectimgs img").click(function() {
 		jQuery('.next').removeClass('disabled');
 	}
 	else {
-		jQuery('.next').addClass('disabled');
+		jQuery('html:not(.iphone) .next').addClass('disabled');
 	}
 });
 
@@ -237,7 +241,7 @@ jQuery(".iphonespan").click(function() {
 		jQuery('.next').removeClass('disabled');
 	}
 	else {
-		jQuery('.next').addClass('disabled');
+		jQuery('html:not(.iphone) .next').addClass('disabled');
 	}
 });
 
@@ -285,10 +289,13 @@ jQuery('.next').click(function() {
 		}
 	}
 	if((stagenumber > maxstage) && (stagenumber != 4)) {
-		jQuery('.next').addClass('disabled');
+		jQuery('html:not(.iphone) .next').addClass('disabled');
 	}
 	if(stagenumber == 4) {
 		jQuery('.iphone .nextstage.next').css('display','block');
+	}
+	if(stagenumber == 5) {
+		jQuery('.iphone .nextstage.next').addClass('disabled');
 	}
 	maxstage = stagenumber;
 	if (stagenumber == 2) { 
@@ -366,7 +373,7 @@ jQuery(".stage select").change(function() {
 		jQuery('.next').removeClass('disabled');
 	}
 	else {
-		jQuery('.next').addClass('disabled');
+		jQuery('html:not(.iphone) .next').addClass('disabled');
 	}
 });
 
@@ -401,7 +408,7 @@ jQuery(".stage6 .req").keyup(function(){
 		jQuery('.next').removeClass('disabled');
 	}
 	else {
-		jQuery('.next').addClass('disabled');
+		jQuery('html:not(.iphone) .next').addClass('disabled');
 	} 
 });
 

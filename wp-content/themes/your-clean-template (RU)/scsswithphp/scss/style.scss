@@ -1496,10 +1496,11 @@ ul.eo-events-shortcode {
 					.value .mlwrapper {
 						width: auto !important; 
 						select {
-							min-width: 102%; 
-							height: 22vw !important;
+							height: auto !important;
+							width: 100% !important;
+							border: 0.5vw #333 solid;
 							option {
-								width: auto !important;
+								width: 100% !important;
 								font-size: 7vw;
 								padding: 1vw; 
 							}
