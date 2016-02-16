@@ -155,6 +155,11 @@ function add_product_to_cart2($product_id) {
 	WC()->cart->add_to_cart( $product_id );
 }
 
+function new_excerpt_length($length) {
+	return 100;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
 add_filter('show_admin_bar', '__return_false');
 
 ?>

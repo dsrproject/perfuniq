@@ -536,11 +536,6 @@ footer {
 	}
 }
 
-
-
-
-
-
 .stagetitle {
 	font-size: 100px;
 	font-family: RomanAntique;
@@ -649,7 +644,7 @@ footer {
 
 .categorybg {
 	height: 20.83vw;
-	background-position: cover;
+	background-size: cover;
 }
 
 .term-blossomic .categorybg {
@@ -673,10 +668,25 @@ footer {
 .term-uzonic .categorybg {	
 	background-image: url('/img/bg4.jpg');
 }
-
-.term-uzonic .categorybg {	
-	background-image: url('/img/bg4.jpg');
+.term-myowngift .categorybg {	
+	background-image: url('/img/giftbg.jpg');
 }
+.term-myowntoiletry .categorybg {	
+	background-image: url('/img/toiletrybg.jpg');
+}
+.term-myownaccessories .categorybg {	
+	background-image: url('/img/accessoriesbg.jpg');
+}
+.term-myowngift section {
+	padding-top: 10px !important; 
+}
+.term-myowntoiletry section {
+	padding-top: 10px !important; 
+}
+.term-myownaccessories section {
+	padding-top: 10px !important; 
+}
+
 
 .term-my-own-atmosphere { 
 	section {
@@ -691,6 +701,9 @@ footer {
 	padding-top: 120px; 
 	position: relative; 
 	text-align: center; 
+	.woocommerce-result-count {
+		display: none; 
+	}
 	.category-product-image {
 		position: absolute;
 		top: 30px;
@@ -1472,11 +1485,14 @@ ul.eo-events-shortcode {
 		.products li {
 			@include mobileproducts;
 		}
+		h1 {
+			font-size: 7vw !important;
+		}
 		.term-description {
 			width: 80%;
 			margin: auto; 
 			p {
-				font-size: 3vw;
+				font-size: 5vw;
 				line-height: 8vw; 
 			}
 		}
@@ -1639,5 +1655,33 @@ ul.eo-events-shortcode {
 .iphone {
 	.nextstage.next {
 		display: none; 
+	}
+}
+
+.post-type-archive-event {
+	text-align: center; 
+	.page-header {
+		padding-top: 21vw;
+		background-image: url('/img/events-bg.jpg'); 
+		background-size: 100%;
+		background-repeat: no-repeat; 
+		background-position: top center; 
+	}
+	aside {
+		display: none; 
+	}
+	.eo-event-title {
+		font-family: RomanAntique; 
+		font-size: 30px; 
+	}
+	.eo-event-content {
+		padding-left: 295px;
+		padding-right: 295px; 
+	}
+	footer {
+		margin-top: 50px; 
+		.footsliderinner {
+			width: 0; 
+		}
 	}
 }

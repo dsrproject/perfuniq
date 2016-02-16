@@ -192,8 +192,14 @@ jQuery('.product-box').click(function() {
 	else if (k == 'myambient') {
 		location.href = '/product-category/my-own-atmosphere';
 	}
+	else if (k == 'mycreams') {
+		location.href = '/product-category/myowntoiletry';
+	}
+	else if (k == 'mygift') {
+		location.href = '/product-category/myowngift';
+	}
 	else if (k == 'myaccessory') {
-		location.href = '/my-own-accessories';
+		location.href = '/product-category/myownaccessories';
 	}
 	else {
 		location.href = '/my-own';
